@@ -195,6 +195,7 @@ export default function OrderScreen(props) {
                         amount={order.totalPrice}
                         onSuccess={successPaymentHandler}
                       ></PayPalButton>
+                      <button className="primary" type="submit" onClick={successPaymentHandler}>Continue</button>
                     </>
                   )}
                 </li>

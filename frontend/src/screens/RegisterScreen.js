@@ -41,11 +41,12 @@ export default function RegisterScreen(props) {
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name" >Name</label>
           <input
             type="text"
             id="name"
             placeholder="Enter name"
+            pattern="[A-Za-z]"
             required
             onChange={(e) => setName(e.target.value)}
           ></input>
@@ -75,7 +76,8 @@ export default function RegisterScreen(props) {
           <input
             type="password"
             id="confirmPassword"
-            placeholder="Enter confirm password"
+            placeholder="Enter confirm password" 
+            minLength='5'
             required
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></input>
