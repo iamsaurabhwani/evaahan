@@ -76,6 +76,7 @@ export default function RegisterScreen(props) {
             type="password"
             id="confirmPassword"
             placeholder="Enter confirm password" 
+            minLength='5'
             required
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></input>
